@@ -17,41 +17,5 @@
 
 FROM ubuntu:16.04
 
-RUN apt-get -y update && \
-    apt-get -y install \
-      nano \
-      vim \
-      joe \
-      wget \
-      curl \
-      jq \
-      gawk \
-      psmisc \
-      python \
-      python-yaml \
-      python-jinja2 \
-      python-paramiko \
-      python-urllib3 \
-      python-tz \
-      python-nose \
-      python-prettytable \
-      python-netifaces \
-      python-dev \
-      python-pip \
-      python-mysqldb \
-      openjdk-8-jre \
-      openjdk-8-jdk \
-      openssh-server \
-      openssh-client \
-      git \
-      bash-completion \
-      inotify-tools \
-      rsync \
-      realpath \
-      net-tools && \
-    mkdir -p /cluster-configuration &&\
-    git clone https://github.com/Microsoft/pai.git &&\
-    pip install python-etcd docker kubernetes GitPython
-
-WORKDIR /tmp
+RUN apt-get -y update
 
